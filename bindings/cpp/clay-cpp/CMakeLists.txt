@@ -35,5 +35,8 @@ install(TARGETS Clay
 )
 install(DIRECTORY include/ DESTINATION include)
 
+target_include_directories(Clay PUBLIC ../../../) # include dir for clay.h
+target_include_directories(Clay PRIVATE ../include/clay) # include header files
+
 # Export configuration for find_package
 install(EXPORT ClayConfig DESTINATION cmake)
